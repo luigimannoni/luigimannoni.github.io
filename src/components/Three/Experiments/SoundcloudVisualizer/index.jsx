@@ -65,14 +65,11 @@ export default class SoundcloudVisualizer extends Base {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(this.renderer.domElement);
 
-
     const group = new THREE.Group();
     scene.add(group);
 
-
     const light = new THREE.AmbientLight(0xffffff);
     scene.add(light);
-
 
     const planeGeometry = new THREE.PlaneBufferGeometry(10000, 10000);
     const planeMaterial = new THREE.MeshPhongMaterial({
@@ -85,7 +82,6 @@ export default class SoundcloudVisualizer extends Base {
     plane.rotation.x = Helpers.deg(-90);
 
     scene.add(plane);
-
 
     const cubeDimension = 45;
     const cubeRows = 9;

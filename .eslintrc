@@ -20,6 +20,8 @@
   ],
   "rules": {
     "react/prop-types": "off",
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "no-mixed-operators": "off",
+    "max-len": "off"
   }
 }

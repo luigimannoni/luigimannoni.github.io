@@ -51,7 +51,6 @@ export default class MatterRepulsor extends Component {
       damping: 0.015,
     };
 
-
     this.engine = Engine.create({
       positionIterations: 20,
       velocityIterations: 20,
@@ -122,7 +121,6 @@ export default class MatterRepulsor extends Component {
         wallOpts,
       ),
     ];
-
 
     const plugin = {
       attractors: [
@@ -323,7 +321,6 @@ export default class MatterRepulsor extends Component {
     guiFolder.colors.open();
 
     gui.add(updateFuncs, 'switchFullscreen').name('Fullscreen toggle');
-
 
     updateFuncs.bgColor();
   }

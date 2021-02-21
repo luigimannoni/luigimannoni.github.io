@@ -2,7 +2,6 @@ import { Component } from 'react';
 import Stats from '../../../libs/Stats';
 import GUI from '../../../libs/GUI';
 
-
 export default class Base extends Component {
   componentDidMount() {
     Stats.mount();

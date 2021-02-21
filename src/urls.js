@@ -14,6 +14,11 @@ const three = [
     path: '/three/soundcloud-visualizer',
     component: 'Experiment',
   },
+  {
+    name: 'Blobs',
+    path: '/three/blobs',
+    component: 'Experiment',
+  },
 ];
 
 const babylon = [
@@ -28,7 +33,6 @@ const babylon = [
   //   component: 'Experiment',
   // },
 ];
-
 
 const javascript = [
   {

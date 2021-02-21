@@ -24,7 +24,7 @@ export default class Navigator extends Component {
   }
 
   toggleNavigator(opened) {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       open: opened || !prevState.open,
     }));
   }
@@ -83,7 +83,6 @@ export default class Navigator extends Component {
         <ul className="top-level">
           {links ? this.renderUrls() : null}
         </ul>
-
 
         <button
           onClick={() => { this.toggleNavigator(!open); }}

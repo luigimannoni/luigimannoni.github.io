@@ -143,7 +143,6 @@ export default class Displacement extends Base {
     composer.addPass(renderPass);
     composer.addPass(bloomPass);
 
-
     const render = () => {
       super.beforeRender();
 
@@ -174,7 +173,6 @@ export default class Displacement extends Base {
     };
 
     render();
-
 
     // Mouse and resize events
     const onWindowResize = () => {

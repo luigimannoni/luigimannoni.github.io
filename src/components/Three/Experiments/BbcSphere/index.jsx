@@ -47,7 +47,6 @@
 //     alpha.world.wrapT = alpha.world.wrapS = THREE.RepeatWrapping;
 //     alpha.world.repeat.set(1, 1);
 
-
 //     // Grouped Mesh
 //     const globe = new THREE.Group();
 //     scene.add(globe);
@@ -90,7 +89,6 @@
 //     );
 //     globe.add(sphereWorld);
 
-
 //     camera.position.z = -110;
 //     camera.lookAt(scene.position);
 //     const time = new THREE.Clock();
@@ -110,7 +108,6 @@
 //     };
 
 //     render();
-
 
 //     // Events
 //     window.addEventListener('resize', () => {
