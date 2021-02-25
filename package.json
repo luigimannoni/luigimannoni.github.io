@@ -1,10 +1,12 @@
 {
   "name": "luigimannoni-experiments",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://experiments.luigimannoni.com/",
   "dependencies": {
+    "@react-three/postprocessing": "^1.5.1",
     "babylonjs": "^4.2.0",
+    "cannon": "^0.6.2",
     "dat.gui": "^0.7.7",
     "hamburgers": "^1.1.3",
     "matter-attractors-f": "^0.1.7",
@@ -12,17 +14,16 @@
     "poly-decomp": "^0.3.0",
     "raw-loader": "^4.0.2",
     "raw.macro": "^0.4.2",
-    "react": "^17.0",
+    "react": "^17.0.1",
     "react-app-rewired": "^2.1.8",
-    "react-dom": "^17.0",
-    "react-postprocessing": "^1.4.0",
+    "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
-    "react-three-fiber": "^5.3.18",
+    "react-three-fiber": "^5.3.19",
     "slugify": "^1.4.7",
     "soundcloud": "^3.3.2",
     "stats.js": "^0.17.0",
-    "three": "^0.125"
+    "three": "^0.126.0"
   },
   "scripts": {
     "start": "react-app-rewired start --scripts-version react-scripts",
