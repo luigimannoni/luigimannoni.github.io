@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import React, { useRef, useState } from 'react';
-import { Canvas, useFrame } from 'react-three-fiber';
+import { Canvas, useFrame, useThree } from 'react-three-fiber';
 import { EffectComposer, SSAO } from '@react-three/postprocessing';
 
 function Box({ position }) {
@@ -10,12 +10,6 @@ function Box({ position }) {
   // Set up state for the hovered and active state
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
-
-  // Rotate mesh every frame, this is outside of React without overhead
-  useFrame(() => {
-    mesh.current.rotation.y += 0.01;
-    mesh.current.rotation.x += 0.01;
-  });
 
   return (
     <mesh
@@ -32,21 +26,31 @@ function Box({ position }) {
   );
 }
 
+function Light() {
+  const light = useRef();
+  const { viewport, mouse } = useThree();
+
+  // Rotate mesh every frame, this is outside of React without overhead
+  useFrame(() => {
+    light.current.position.set((mouse.x * viewport.width) / 2, (mouse.y * viewport.height) / 2, 0);
+  });
+
+  return (
+    <pointLight ref={light} position={[10, 10, 10]} />
+  );
+}
+
 export default function Blobs() {
   return (
     <Canvas
       shadowMap
       gl={{ alpha: false, antialias: false }}
-      // camera={{
-      //   fov: 75, position: [0, 0, 70], near: 10, far: 150,
-      // }}
-      onCreated={(state) => state.gl.setClearColor('#f0f0f0')}
+      onCreated={(state) => state.gl.setClearColor('#444444')}
     >
       <ambientLight />
-      <pointLight position={[10, 10, 10]} />
       <Box position={[-1.2, 0, 0]} />
       <Box position={[1.2, 0, 0]} />
-
+      <Light />
       <ambientLight intensity={1.5} />
       <pointLight position={[100, 100, 100]} intensity={2} castShadow />
       <pointLight position={[-100, -100, -100]} intensity={5} color="red" />
