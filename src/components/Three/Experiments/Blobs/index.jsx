@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
-import { EffectComposer, SSAO } from 'react-postprocessing';
+import { EffectComposer, SSAO } from '@react-three/postprocessing';
 
 function Box({ position }) {
   // This reference will give us direct access to the mesh
